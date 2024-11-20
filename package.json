@@ -1,0 +1,25 @@
+{
+  "name": "backend",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy --minify",
+    "db:generate": "drizzle-kit generate",
+    "db:local": "bunx wrangler d1 execute database --local",
+    "db:remote": "bunx wrangler d1 execute database --remote"
+  },
+  "dependencies": {
+    "@hono/zod-validator": "^0.4.1",
+    "@libsql/client": "^0.14.0",
+    "@types/uuid4": "^2.0.3",
+    "drizzle-orm": "^0.36.0",
+    "drizzle-zod": "^0.5.1",
+    "hono": "^4.6.9",
+    "uuid": "^11.0.2",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241022.0",
+    "drizzle-kit": "^0.27.1",
+    "wrangler": "^3.83.0"
+  }
+}
